@@ -6,8 +6,6 @@
 
 ## Assignment Overview
 
-
-
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
 implement, but your component must fit within the constraints of our software
@@ -28,8 +26,6 @@ detailed feedback, which may help you decide which component to ultimately
 implement.
 
 ## Assignment Checklist
-
-
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,21 +98,18 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-Career goals: I want to build AI/software systems that make human–computer communication clearer, safer, and easier to measure. I’m especially interested in dialog tooling for support chat, tutoring systems, and narrative games—places where structure, privacy, and insight all matter.
+Career goals: I want to build AI/software systems that make the communication between human and computer clearer, safer, and easier to measure. I’m especially interested in dialog tooling for support chat, tutoring systems, and narrative games, (like Visual Novel, or just
+action and choices games like Red Death Redemption), where structure, choices of conversation, and insight all matter.
 
-Personal interests: I enjoy gaming and following creators on social media. Games inspire me to think in terms of branching choices and player experience. Creator content highlights moderation, safety, and analytics (what performs, why it performs), which is directly related to conversation related programming. 
+Personal interests: I enjoy gaming and following creators on social media. Games inspire me to think in terms of branching choices (story mode) and player experience. Creator content highlights interaction, safety (of both creator and viewer), and analytics (what performs, why it performs), which is directly related to conversation related programming. I want to build something that related to chatting between people and have data-masking to avoid leakage and data stealing also.
 
 ## Assignment
-
-
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -129,8 +118,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -205,11 +192,13 @@ will likely refine your design to make your implementation easier to use.
     - void length() : Give the number of chat in the log
     - void append(String speaker, String text): appends an chat with an internal timestamp.
     - boolean isEmpty() : report whether the chat is empty.
-    - Map< String, String> removeChat() — undo chat
+    - Map< String, String> removeChat():  undo chat
+    - void reset(): reset the log
+    - ConversationLog segment(int start, int end): delete all chat but the lines chosen
   - **Secondary Methods**:
     - void exportChat(Simple Writer out): print a copy of the chat log
-    - void importCSV(SimpleReader in) — save/load.
-    - String toTranscript() — format chat as paragraph. 
+    - void importChat(SimpleReader in): save/load.
+    - String toTranscript(): format chat as paragraph.
     - Sequence<Integer> find(String substring): find the text you would want to find in the log
     - Sequence<String> speakerChat: extract the conversion of the given speaker only
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
@@ -218,7 +207,7 @@ will likely refine your design to make your implementation easier to use.
       - Yes, because the chat log increase overtime
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - Could be using Map.Pair. 
+      - Could be using Map.Pair.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
       - yes, I think it will need a constant somewhere
@@ -259,14 +248,16 @@ will likely refine your design to make your implementation easier to use.
   - **Kernel Methods**:
     - void setSource(ConversationLog log): choose the input log.
     - void clearRules(): remove all redaction rules.
-    - void addRule(String label, String pattern, String mask) — register a simple regex‑like rule.
+    - void addRule(String label, String pattern, String mask):  register a simple regex‑like rule.
+    - void removeRule(String label): delete a rule
+    - String showRule(): display all rules
     - ConversationLog redact(): return a new log with all matches masked.
   - **Secondary Methods**:
     - int countMatches(String label): number of matches found for a rule.
     - Map<String,Integer> summary(): map from rule label to match count.
     - void addCommonPIIRules(): convenience to add email/phone/ID patterns.
-    - ConversationLog sample(int n) — first n redacted turns for quick review.
-    
+    - ConversationLog sample(int n):  first n redacted turns for quick review.
+
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
@@ -279,7 +270,7 @@ will likely refine your design to make your implementation easier to use.
       - I am not sure at the moment but could be using some
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - No but these secondary method must use kernel method to operate. 
+      - No but these secondary method must use kernel method to operate.
 
 ## Post-Assignment
 
@@ -287,8 +278,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -327,7 +316,6 @@ of development.
 
 ### Submission
 
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -335,8 +323,6 @@ created for you automatically every time you save, so just double check that
 all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
-
-
 
 ### Peer Review
 
