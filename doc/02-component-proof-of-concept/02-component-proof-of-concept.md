@@ -1,8 +1,8 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
 - **Name**: Dai Duong Tran
-- **Dot Number**: tran.1154
-- **Due Date**: 10/17
+- **Dot Number**:tran.1154
+- **Due Date**: 10/9/2025
 
 ## Assignment Overview
 
