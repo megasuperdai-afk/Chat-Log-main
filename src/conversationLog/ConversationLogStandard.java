@@ -1,12 +1,15 @@
 package conversationLog;
 // This copied from OSU components.standard.Standard on the website; I just put it here to make the Kernel not marking errors.
+
 // To be honest, I don't really understand what this file is for.
 // I not 100% understand the purpose of this file, but it seems to be legit as when I checked the OSU components website,
 // this file is indeed part of their standard component library. So I will keep it here to avoid errors in the Kernel interface.
 // Also the format of all file I did in this exercise is same with OSU components website, I look in Queue kernel, queue1l and queue
 // and standard interface to mimic their format.
+
+//Anyway, these are implemented in ConversationLogSecondary.java directly, so I guess it's fine.
 public interface ConversationLogStandard<T> {
- 
+
     /**
      * Returns a new object with the same <i>dynamic</i> type as {@code this},
      * having an initial value.
@@ -22,7 +25,7 @@ public interface ConversationLogStandard<T> {
      * @ensures is_initial(newInstance)
      */
     T newInstance();
- 
+
     /**
      * Resets {@code this} to an initial value.
      *
@@ -35,7 +38,7 @@ public interface ConversationLogStandard<T> {
      * @clears this
      */
     void clear();
- 
+
     /**
      * Sets {@code this} to the incoming value of {@code source}, and resets
      * {@code source} to an initial value; the declaration notwithstanding, the
@@ -55,5 +58,5 @@ public interface ConversationLogStandard<T> {
      * @ensures this = #source
      */
     void transferFrom(T source);
- 
+
 }

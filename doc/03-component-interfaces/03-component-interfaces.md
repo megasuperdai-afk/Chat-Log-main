@@ -130,7 +130,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `![ALT TEXT](path/to/file)`).
 
-<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
+![alt text](image.png)
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
@@ -173,8 +173,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
-
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
 Here's what I would expect to see at the minimum:
@@ -189,14 +187,18 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 ## YYYY.MM.DD
-
+2025/23/10
 ### Added
 
-- Designed kernel and enhanced interfaces for <!-- insert name of component here --> component
+- Designed kernel and enhanced interfaces for conversationLog component
 
 ### Updated
 
-- Changed design to include ...
+- No method or class have been updated in term of coding
+- Every single method and class was implemented succesfully at the submission of
+  02-proof-of-concept
+- Update documenting and commenting on all method
+- Updated Javadoc and fixed checkstyles.
 
 ```
 
@@ -207,8 +209,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
