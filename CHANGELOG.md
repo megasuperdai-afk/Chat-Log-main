@@ -8,9 +8,47 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Calendar Versioning](https://calver.org/) of
+the following form: YYYY.0M.0D.
+
+## YYYY.MM.DD
+
+2025/23/10
+
+### Added
+
+- Designed kernel and enhanced interfaces for conversationLog component
+
+### Updated
+
+- No method or class have been updated in term of coding
+- Every single method and class was implemented succesfully at the submission of
+  02-proof-of-concept
+- Update documenting and commenting on all method
+- Updated Javadoc and fixed checkstyles.
+
+## YYYY.MM.DD
+
+2025/16/10
+
+### Added
+
+- Designed all kernel and enhanced interfaces for conversationLog component
+
+### Updated
+
+- Made Interfaces, Implemented all method in ConversionLogKernel and ConversionLog
+- Implemented all on ConversionLogSecondary
+
 ## 2025.09.19
 
 ### Added
+
 - Finish 01-component-brainstorming
 - Designed a ConvertionLog component
 - Designed a LogAnalyzer component
